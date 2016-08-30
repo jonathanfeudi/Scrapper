@@ -9,13 +9,10 @@ export default class Home extends Component {
   }
   render() {
     return (
-      <View>
+      <View style={{marginTop:20}}>
         <Text>Current Scene: { this.props.title }</Text>
         <TouchableHighlight onPress={this.props.galleryButton}>
           <Text>Gallery</Text>
-        </TouchableHighlight>
-        <TouchableHighlight onPress={this.props.onBack}>
-          <Text>Tap me to go back</Text>
         </TouchableHighlight>
       </View>
     )
