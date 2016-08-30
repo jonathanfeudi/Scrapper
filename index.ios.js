@@ -3,6 +3,7 @@ import { Navigator, Text, TouchableHighlight, View, AppRegistry } from 'react-na
 
 import Home from './Home';
 import Gallery from './Gallery';
+import Detail from './Detail';
 
 class Scrapper extends Component {
   render() {
@@ -38,7 +39,23 @@ class Scrapper extends Component {
                   navigator.pop();
                 }
               }}
+              clickPhoto={() => {
+                const nextIndex = route.index + 1;
+                navigator.push({
+                  title: 'Detail',
+                  index: nextIndex,
+                });
+              }}
             />
+            }
+            if (route.title == 'Detail'){
+              return <Detail title={route.title}
+              onBack={() => {
+                if (route.index > 0) {
+                  navigator.pop();
+                }
+              }}
+              />
             }
           }
         }

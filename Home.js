@@ -12,7 +12,7 @@ export default class Home extends Component {
       <View>
         <Text>Current Scene: { this.props.title }</Text>
         <TouchableHighlight onPress={this.props.galleryButton}>
-          <Text>Tap me to load the next scene</Text>
+          <Text>Gallery</Text>
         </TouchableHighlight>
         <TouchableHighlight onPress={this.props.onBack}>
           <Text>Tap me to go back</Text>
